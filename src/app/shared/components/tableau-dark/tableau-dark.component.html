@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <table class="table table-dark">
+      <thead>
+        <tr></tr>
+        <tr>
+          <th *ngFor="let itemTitle of headers" scope="col">
+            {{ itemTitle }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-content></ng-content>
+
+        <!-- <tr *ngFor="let item of collection">
+                <td>{{item.typePresta}}</td>
+                <td>{{item.client}}</td>
+                <td>{{item.nbJours}}</td>
+                <td>{{item | total | currency:'EUR'}}</td>
+                <td>{{item | total:item.tauxTva| currency:'EUR'}}</td>
+                <td>{{item | total | currency:'EUR'}}</td>
+                <td>{{item.state}}</td>
+              </tr> -->
+      </tbody>
+    </table>
+  </div>

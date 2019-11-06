@@ -16,12 +16,11 @@ export class PrestationsService {
   }
 
 
-public update(item: Prestation, state: State)
-{
-  console.log(item);
-  item.state = state;
-  console.log(item);
-}
+  public update(item: Prestation, state: State) {
+    console.log(item);
+    item.state = state;
+    console.log(item);
+  }
 
   // getCollection
   public get collection() {

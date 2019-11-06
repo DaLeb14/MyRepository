@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PrestationsService } from '../../services/prestations.service';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { State } from 'src/app/shared/enums/state.enum';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,14 +16,23 @@ export class PagePrestationsComponent implements OnInit {
   public collection: Prestation[];
   // public states =  Object.values(State);
   public states = State;
+  public title: string;
+  public label: string;
 
-  constructor(private prestationService: PrestationsService) { }
+  constructor(private prestationService: PrestationsService,
+              private route: ActivatedRoute) { }
 
 
 
 
   ngOnInit() {
     this.collection = this.prestationService.collection;
+
+    this.route.data.subscribe((donnees) => {
+      this.title = donnees.title;
+      this.label = donnees.label;
+    });
+
 
     this.headers = [
       'Type',

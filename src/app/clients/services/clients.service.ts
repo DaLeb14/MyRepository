@@ -7,7 +7,7 @@ import { FakeClients } from './fake-clients';
   providedIn: 'root'
 })
 
-export class ClientsService  {
+export class ClientsService {
 
   private pCollection: Client[];
 
@@ -17,12 +17,11 @@ export class ClientsService  {
   }
 
 
-public update(item: Client, state: ClientState)
-{
-  console.log(item);
-  item.state = state;
-  console.log(item);
-}
+  public update(item: Client, state: ClientState) {
+    console.log(item);
+    item.state = state;
+    console.log(item);
+  }
 
   // getCollection
   public get collection() {

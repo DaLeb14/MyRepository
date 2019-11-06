@@ -4,18 +4,20 @@ import { ClientsService } from '../../services/clients.service';
 import { ClientState } from 'src/app/shared/enums/client-state.enum';
 
 
-@Component(
-{
-  selector: 'app-page-clients',
-  templateUrl: './page-clients.component.html',
-  styleUrls: ['./page-clients.component.scss']
-})
+@Component({
+    selector: 'app-page-clients',
+    templateUrl: './page-clients.component.html',
+    styleUrls: ['./page-clients.component.scss']
+  })
 
 export class PageClientsComponent implements OnInit {
   public headers: string[];
   public collection: Client[];
   // public states =  Object.values(State);
   public states = ClientState;
+  public title: string;
+  public label: string;
+
 
   constructor(private clientsService: ClientsService) { }
 
@@ -31,6 +33,8 @@ export class PageClientsComponent implements OnInit {
       'State'
     ];
 
+    this.title = 'Clients';
+    this.label = 'Tous les clients';
     console.log(this.clientsService.collection);
   }
 

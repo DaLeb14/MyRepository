@@ -1,3 +1,5 @@
+<app-template-a [title]="title" [label]="label">
+
 <app-tableau-light [headers]="headers">
   <tr *ngFor="let item of collection">
     <td>{{ item.typePresta }}</td>
@@ -19,5 +21,8 @@
     </td>
   </tr>
 </app-tableau-light>
+
+
+</app-template-a>
 
 <!-- <p>{{collection | json}}</p> -->

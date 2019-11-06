@@ -4,7 +4,11 @@ import { PagePrestationsComponent } from './pages/page-prestations/page-prestati
 
 
 const appRoutes: Routes = [
-  { path: '', component: PagePrestationsComponent }
+  {
+    path: '',
+    component: PagePrestationsComponent,
+    data: { title: 'Prestations', label: 'Toutes les prestations' }
+  }
 ];
 
 

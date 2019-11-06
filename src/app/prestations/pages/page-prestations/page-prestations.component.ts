@@ -14,7 +14,7 @@ export class PagePrestationsComponent implements OnInit {
   public headers: string[];
   public collection: Prestation[];
   // public states =  Object.values(State);
-  public states =  State;
+  public states = State;
 
   constructor(private prestationService: PrestationsService) { }
 
@@ -22,23 +22,22 @@ export class PagePrestationsComponent implements OnInit {
 
 
   ngOnInit() {
-  this.collection = this.prestationService.collection;
+    this.collection = this.prestationService.collection;
 
-  this.headers = [
-    'Type',
-    'Client',
-    'NbJours',
-    'TjmHT',
-    'Total HT',
-    'Total TTC',
-    'State'
-  ];
+    this.headers = [
+      'Type',
+      'Client',
+      'NbJours',
+      'TjmHT',
+      'Total HT',
+      'Total TTC',
+      'State'
+    ];
 
-  console.log(this.prestationService.collection);
-}
+    console.log(this.prestationService.collection);
+  }
 
-  public update(item: any, event:any)
-  {
+  public update(item: any, event: any) {
     this.prestationService.update(item, event.target.value);
   }
 

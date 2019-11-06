@@ -23,26 +23,26 @@ public update(item: Prestation, state: State)
   console.log(item);
 }
 
-  //getCollection
+  // getCollection
   public get collection() {
     return this.pCollection;
   }
 
 
-  //setCollection
+  // setCollection
   public set collection(col: Prestation[]) {
     this.pCollection = col;
   }
 
 
 
-  //update
+  // update
 
-  //addItem
+  // addItem
 
-  //delete
+  // delete
 
-  //getItem
+  // getItem
 
 
 

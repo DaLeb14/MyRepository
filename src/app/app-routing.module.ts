@@ -3,7 +3,8 @@ import { Router, RouterModule, Routes, PreloadAllModules } from '@angular/router
 
 
 const appRoutes: Routes = [
-  { path: '',
+  {
+    path: '',
     redirectTo: '/login',
     pathMatch: 'full'
   },
@@ -18,8 +19,7 @@ const appRoutes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(mod => mod.PageNotFoundModule)
-  },
-
+  }
 ];
 
 

@@ -4,7 +4,8 @@ import { ClientsService } from '../../services/clients.service';
 import { ClientState } from 'src/app/shared/enums/client-state.enum';
 
 
-@Component({
+@Component(
+{
   selector: 'app-page-clients',
   templateUrl: './page-clients.component.html',
   styleUrls: ['./page-clients.component.scss']

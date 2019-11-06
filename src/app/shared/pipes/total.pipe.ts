@@ -14,8 +14,7 @@ export class TotalPipe implements PipeTransform {
       // <td>{{item.totalTtc()
 
 
-      if(args)
-      {
+      if (args) {
 
         return value.totalTtc(args);
       }

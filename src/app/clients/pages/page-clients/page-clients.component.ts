@@ -17,7 +17,8 @@ export class PageClientsComponent implements OnInit {
   public states = ClientState;
   public title: string;
   public label: string;
-
+  public labelBtn: string;
+  public routeBtn: string;
 
   constructor(private clientsService: ClientsService) { }
 
@@ -35,7 +36,11 @@ export class PageClientsComponent implements OnInit {
 
     this.title = 'Clients';
     this.label = 'Tous les clients';
+    this.labelBtn = 'Ajouter un client';
+    this.routeBtn = 'add';
+
     console.log(this.clientsService.collection);
+
   }
 
   public update(item: any, event: any) {

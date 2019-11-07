@@ -38,6 +38,10 @@ export class PrestationsService {
   // update
 
   // addItem
+  public add(item: Prestation)
+  {
+    this.collection.push(new Prestation(item));
+  }
 
   // delete
 

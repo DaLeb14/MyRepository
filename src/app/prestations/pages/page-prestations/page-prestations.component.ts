@@ -18,6 +18,8 @@ export class PagePrestationsComponent implements OnInit {
   public states = State;
   public title: string;
   public label: string;
+  public labelBtn: string;
+  public routeBtn: string;
 
   constructor(private prestationService: PrestationsService,
               private route: ActivatedRoute) { }
@@ -43,6 +45,9 @@ export class PagePrestationsComponent implements OnInit {
       'Total TTC',
       'State'
     ];
+
+    this.labelBtn = 'Ajouter une prestation';
+    this.routeBtn = 'add';
 
     console.log(this.prestationService.collection);
   }

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PrestationsService } from '../../services/prestations.service';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { State } from 'src/app/shared/enums/state.enum';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription, Observable } from 'rxjs';
 
 
 @Component({
@@ -13,22 +14,30 @@ import { ActivatedRoute } from '@angular/router';
 export class PagePrestationsComponent implements OnInit {
 
   public headers: string[];
-  public collection: Prestation[];
+  // public collection: Prestation[];
+  public collection$: Observable<Prestation[]>;
   // public states =  Object.values(State);
   public states = State;
   public title: string;
   public label: string;
   public labelBtn: string;
   public routeBtn: string;
+  sub: Subscription;
+
 
   constructor(private prestationService: PrestationsService,
-              private route: ActivatedRoute) { }
+    private route: ActivatedRoute) { }
 
 
 
 
   ngOnInit() {
-    this.collection = this.prestationService.collection;
+
+      this.collection$ = this.prestationService.collection;
+
+    // this.sub = this.prestationService.collection.subscribe( (data) => { this.collection = data } );
+
+
 
     this.route.data.subscribe((donnees) => {
       this.title = donnees.title;
@@ -57,6 +66,8 @@ export class PagePrestationsComponent implements OnInit {
   }
 
 
-
+  // ngOnDestroy() {
+  //   this.sub.unsubscribe();
+  // }
 
 }

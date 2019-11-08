@@ -19,12 +19,12 @@
         <!-- <option *ngFor="let state of states" [value]="state">{{state}}</option> -->
       </select>
     </td>
+    <!-- <td><app-btn-actions (action$) = "doAction($event, item)"></app-btn-actions></td> -->
+    <td><app-btn-actions (actionEdit$) = "doEdit(item)"></app-btn-actions></td>
   </tr>
 </app-tableau-light>
 
-
 <app-button [label]="labelBtn" [route]="routeBtn"></app-button>
-
 
 </app-template-a>
 

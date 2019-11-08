@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import {CoderbaseUiModule} from '@coderbase/ui';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     CoderbaseUiModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ]
 })
 export class UiModule { }

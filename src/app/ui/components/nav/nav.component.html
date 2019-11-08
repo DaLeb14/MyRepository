@@ -9,3 +9,9 @@
     <a class="nav-link" routerLink="/clients" routerLinkActive="active">Clients</a>
   </li>
 </ul>
+
+<hr>
+
+<span>
+    <a  *ngIf="version$ | async as version" (click)="upgradeVersion()">++ {{version}}</a>
+</span>

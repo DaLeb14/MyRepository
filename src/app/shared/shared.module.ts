@@ -7,16 +7,19 @@ import { TableauDarkComponent } from './components/tableau-dark/tableau-dark.com
 import { TemplatesModule } from '../templates/templates.module';
 import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
+import { BtnActionsComponent } from './components/btn-actions/btn-actions.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
 @NgModule({
-  declarations: [TotalPipe, TableauLightComponent, StateDirective, TableauDarkComponent, ButtonComponent],
+  declarations: [TotalPipe, TableauLightComponent, StateDirective, TableauDarkComponent, ButtonComponent, BtnActionsComponent],
   imports: [
     CommonModule,
     TemplatesModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
-  exports: [TotalPipe, TableauLightComponent, StateDirective, TableauDarkComponent, TemplatesModule, ButtonComponent]
+  exports: [TotalPipe, TableauLightComponent, StateDirective, TableauDarkComponent, TemplatesModule, ButtonComponent, BtnActionsComponent]
 })
 export class SharedModule { }
